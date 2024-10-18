@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.hamcrest.Matchers.*;
 import org.json.JSONObject;
 import com.base.BaseTest;
-import com.github.dockerjava.transport.DockerHttpClient.Response;
+//import com.github.dockerjava.transport.DockerHttpClient.Response;
 
 public class TestUtilities extends BaseTest{
 	
@@ -27,7 +27,7 @@ public class TestUtilities extends BaseTest{
 
 	public static void waitForDisplayOfElement(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		WebElement element_ = wait.until(ExpectedConditions.visibilityOf(element));
+		wait.until(ExpectedConditions.visibilityOf(element));
 		
 	}
 	

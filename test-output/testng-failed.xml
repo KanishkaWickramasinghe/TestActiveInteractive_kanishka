@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testCases.CreateWorkingClassHero">
+      <class name="com.testCases.TestCreateWorkingClassHero">
         <methods>
-          <include name="createHero"/>
+          <include name="uploadCSVAsBookkeeper"/>
         </methods>
-      </class> <!-- com.testCases.CreateWorkingClassHero -->
+      </class> <!-- com.testCases.TestCreateWorkingClassHero -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

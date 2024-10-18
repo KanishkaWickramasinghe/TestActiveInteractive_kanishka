@@ -32,11 +32,11 @@ public class LoginPage extends BaseTest{
 		return banner;
 	}
 	
-	public ClerkDashboard loginToWorkingClassHeroSystem(String username,String password) {
+	public ClerkDashboardPage loginToWorkingClassHeroSystem(String username,String password) {
 		txt_username.sendKeys(username);
 		txt_pasword.sendKeys(password);
 		btn_submit.click();
 		
-		return new ClerkDashboard();
+		return new ClerkDashboardPage();
 	}
 }

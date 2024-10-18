@@ -1,5 +1,6 @@
 package com.pages;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
@@ -38,7 +39,9 @@ public class UploadCSVPage extends BaseTest{
 	}
 	
 	public void createCSVUpload() {
-		String filePath = "C:\\Users\\a c e r\\Documents\\KANISHKA\\Automation\\workspace\\TestActivateInteractive\\resources\\new4.csv";
+		File file = new File("resources/new4.csv");
+		
+		String filePath = file.getAbsolutePath();
 		input_uploadCSV.sendKeys(filePath);
 		driver.manage().timeouts().implicitlyWait(TestUtilities.IMPLICIT_WAIT,TimeUnit.SECONDS);
 		btn_create.click();
