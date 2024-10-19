@@ -37,18 +37,21 @@ public class UploadCSVPage extends BasePage{
 		return banner;
 	}
 	
-	public void createCSVUpload() {
+	public void createCSVUpload() throws InterruptedException {
 		File file = new File("resources/new4.csv");
 		
 		String filePath = file.getAbsolutePath();
 		input_uploadCSV.sendKeys(filePath);
 		driver.manage().timeouts().implicitlyWait(TestUtilities.IMPLICIT_WAIT,TimeUnit.SECONDS);
+		TestUtilities.waitForDisplayOfElement(btn_create);
 		btn_create.click();
+		Thread.sleep(3000);
 		TestUtilities.waitForDisplayOfElement(statusBanner);
 		
 	}
 
 	public boolean verifyBannerDisplay() {
+		TestUtilities.waitForDisplayOfElement(statusBanner);
 		if(statusBanner.isDisplayed()) {
 			return true;
 		}
@@ -59,6 +62,7 @@ public class UploadCSVPage extends BasePage{
 	}
 
 	public void verifyDisplayedBannerText() {
+		TestUtilities.waitForDisplayOfElement(statusBanner);
 		String text=bannerText.getText();
 		if(text.equals("Unable to create hero!")) {
 			System.out.println("Errornous upload of CSV."); 

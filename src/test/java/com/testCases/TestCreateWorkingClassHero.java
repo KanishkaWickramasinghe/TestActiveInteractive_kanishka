@@ -11,6 +11,8 @@ import java.io.FileReader;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import com.pages.BasePage;
@@ -30,7 +32,7 @@ public class TestCreateWorkingClassHero extends BasePage{
 	LoginPage login;
 	UploadCSVPage upload;
 	ClerkDashboardPage clerk;
-	String url = "http://localhost:9997";
+	String url = prop.getProperty("url");           //"http://localhost:9997";
 	
 	@Test
 	void createHero() throws FileNotFoundException{
@@ -85,7 +87,7 @@ public class TestCreateWorkingClassHero extends BasePage{
 	}
 	
 	@Test
-	void uploadCSVAsBookkeeper() {
+	void uploadCSVAsBookkeeper() throws InterruptedException {
 		initialization();
 		login=new LoginPage();
 		Assert.assertEquals(login.verifyLoginPageBannerText(), "Working Class Hero System");
@@ -98,7 +100,7 @@ public class TestCreateWorkingClassHero extends BasePage{
 		upload.createCSVUpload();
 		Assert.assertEquals(upload.verifyBannerDisplay(), true,"File not uploaded!");
 		upload.verifyDisplayedBannerText();
-		driver.quit();
+		
 	}
 	
 	@Test
@@ -146,6 +148,19 @@ public class TestCreateWorkingClassHero extends BasePage{
             .statusCode(200)
             .header("Content-Type", equalTo("application/json")); // Assert status code is 200 (Created)
     }
+	
+	
+	@AfterMethod
+    public void afterMethod(ITestResult result) {
+        // Check the name of the test method that just ran
+        if (result.getMethod().getMethodName().equals("uploadCSVAsBookkeeper")) {
+            System.out.println("Running @AfterMethod for '----UploadCSVAsClark----' ");
+            // Your @AfterMethod logic here
+            driver.quit();
+        }
+    }
+	
+	
 		
 	@Test
 	public void verifyHerosOwningMoney() throws FileNotFoundException {

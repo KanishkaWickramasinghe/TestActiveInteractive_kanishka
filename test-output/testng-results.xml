@@ -1,17 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-19T20:06:43 SGT" name="Default suite" finished-at="2024-10-19T20:06:45 SGT" duration-ms="1802">
+  <suite started-at="2024-10-19T21:07:43 SGT" name="TestSuite" finished-at="2024-10-19T21:07:51 SGT" duration-ms="7663">
     <groups>
     </groups>
-    <test started-at="2024-10-19T20:06:43 SGT" name="Default test" finished-at="2024-10-19T20:06:45 SGT" duration-ms="1802">
+    <test started-at="2024-10-19T21:07:43 SGT" name="TestName" finished-at="2024-10-19T21:07:51 SGT" duration-ms="7663">
       <class name="com.testCases.TestCreateWorkingClassHero">
-        <test-method signature="byPersonAndType()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@408d971b]" started-at="2024-10-19T20:06:43 SGT" name="byPersonAndType" finished-at="2024-10-19T20:06:45 SGT" duration-ms="1767" status="PASS">
+        <test-method signature="byPersonAndType()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1]" started-at="2024-10-19T21:07:43 SGT" name="byPersonAndType" finished-at="2024-10-19T21:07:45 SGT" duration-ms="1597" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- byPersonAndType -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1]" started-at="2024-10-19T21:07:45 SGT" name="afterMethod" finished-at="2024-10-19T21:07:45 SGT" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=byPersonAndType status=SUCCESS method=TestCreateWorkingClassHero.byPersonAndType()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="createHero()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1]" started-at="2024-10-19T21:07:45 SGT" name="createHero" finished-at="2024-10-19T21:07:45 SGT" duration-ms="122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createHero -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1]" started-at="2024-10-19T21:07:45 SGT" name="afterMethod" finished-at="2024-10-19T21:07:45 SGT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createHero status=SUCCESS method=TestCreateWorkingClassHero.createHero()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="createWorkingCLassHerosWithVouchers()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1]" started-at="2024-10-19T21:07:45 SGT" name="createWorkingCLassHerosWithVouchers" finished-at="2024-10-19T21:07:45 SGT" duration-ms="65" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createWorkingCLassHerosWithVouchers -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1]" started-at="2024-10-19T21:07:45 SGT" name="afterMethod" finished-at="2024-10-19T21:07:45 SGT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createWorkingCLassHerosWithVouchers status=SUCCESS method=TestCreateWorkingClassHero.createWorkingCLassHerosWithVouchers()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="uploadCSVAsBookkeeper()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1]" started-at="2024-10-19T21:07:45 SGT" name="uploadCSVAsBookkeeper" finished-at="2024-10-19T21:07:50 SGT" duration-ms="5426" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadCSVAsBookkeeper -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1]" started-at="2024-10-19T21:07:50 SGT" name="afterMethod" finished-at="2024-10-19T21:07:50 SGT" duration-ms="137" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=uploadCSVAsBookkeeper status=SUCCESS method=TestCreateWorkingClassHero.uploadCSVAsBookkeeper()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyHerosOwningMoney()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1]" started-at="2024-10-19T21:07:50 SGT" name="verifyHerosOwningMoney" finished-at="2024-10-19T21:07:51 SGT" duration-ms="86" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHerosOwningMoney -->
+        <test-method signature="verifyVoucherByPerson()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1]" started-at="2024-10-19T21:07:51 SGT" name="verifyVoucherByPerson" finished-at="2024-10-19T21:07:51 SGT" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyVoucherByPerson -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1]" started-at="2024-10-19T21:07:51 SGT" name="afterMethod" finished-at="2024-10-19T21:07:51 SGT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyHerosOwningMoney status=SUCCESS method=TestCreateWorkingClassHero.verifyHerosOwningMoney()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1]" started-at="2024-10-19T21:07:51 SGT" name="afterMethod" finished-at="2024-10-19T21:07:51 SGT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyVoucherByPerson status=SUCCESS method=TestCreateWorkingClassHero.verifyVoucherByPerson()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@3b69e7d1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
       </class> <!-- com.testCases.TestCreateWorkingClassHero -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.testCases.TestGenerateTaxRelief">
+        <test-method signature="generateHeroTaxRelief()[pri:0, instance:com.testCases.TestGenerateTaxRelief@bcec361]" started-at="2024-10-19T21:07:51 SGT" name="generateHeroTaxRelief" finished-at="2024-10-19T21:07:51 SGT" duration-ms="81" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateHeroTaxRelief -->
+      </class> <!-- com.testCases.TestGenerateTaxRelief -->
+    </test> <!-- TestName -->
+  </suite> <!-- TestSuite -->
 </testng-results>

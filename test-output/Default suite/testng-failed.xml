@@ -5,7 +5,8 @@
     <classes>
       <class name="com.testCases.TestCreateWorkingClassHero">
         <methods>
-          <include name="byPersonAndType"/>
+          <include name="uploadCSVAsBookkeeper"/>
+          <include name="afterMethod"/>
         </methods>
       </class> <!-- com.testCases.TestCreateWorkingClassHero -->
     </classes>

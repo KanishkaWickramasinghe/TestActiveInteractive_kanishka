@@ -28,6 +28,7 @@ public class ClerkDashboardPage extends BasePage{
 	}
 	
 	public UploadCSVPage navigateToUploadCSV() {
+		TestUtilities.waitForDisplayOfElement(btn_addHero);
 		btn_addHero.click();
 		TestUtilities.waitForDisplayOfElement(link_UploadCSV);
 		link_UploadCSV.click();

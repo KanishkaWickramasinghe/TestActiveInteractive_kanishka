@@ -47,7 +47,7 @@ public class BasePage {
 		driver.manage().timeouts().pageLoadTimeout(TestUtilities.PAGE_LOAD_TIMEOUT,TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtilities.IMPLICIT_WAIT,TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("url"));
+		driver.get(prop.getProperty("url")+"/login");
 	}
 }
 
