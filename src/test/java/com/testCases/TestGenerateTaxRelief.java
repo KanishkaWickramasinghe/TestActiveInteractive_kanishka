@@ -11,13 +11,12 @@ import java.io.InputStream;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.base.BaseTest;
-
+import com.pages.BasePage;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
-public class TestGenerateTaxRelief extends BaseTest{
+public class TestGenerateTaxRelief extends BasePage{
 
 	String url="http://localhost:9997";
 	
@@ -39,9 +38,7 @@ public class TestGenerateTaxRelief extends BaseTest{
 			.extract().response();
 		
 		File downloadedFile = new File("downloads/downloaded_file.txt");
-		
 		saveBinaryFileAsText(response, downloadedFile);
-        
         System.out.println("Binary file downloaded and saved as .txt file: " + downloadedFile.getAbsolutePath());
 		
 	    // Verify that the file has been downloaded successfully

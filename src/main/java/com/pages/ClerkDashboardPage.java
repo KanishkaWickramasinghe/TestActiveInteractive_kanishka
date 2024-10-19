@@ -4,10 +4,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.base.BaseTest;
 import com.testUtilities.TestUtilities;
 
-public class ClerkDashboardPage extends BaseTest{
+public class ClerkDashboardPage extends BasePage{
 
 	@FindBy(xpath ="//div[@class='col-md']/span")
 	WebElement lbl_header;

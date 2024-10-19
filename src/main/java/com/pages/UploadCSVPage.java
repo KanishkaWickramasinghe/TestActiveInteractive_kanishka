@@ -7,10 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.base.BaseTest;
 import com.testUtilities.TestUtilities;
 
-public class UploadCSVPage extends BaseTest{
+public class UploadCSVPage extends BasePage{
 	
 	@FindBy(xpath = "//label[@class='form-label']")
 	WebElement lbl_uploadCSV;

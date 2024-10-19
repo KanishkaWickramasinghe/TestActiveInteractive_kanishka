@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="TestSuite">
+    
+    <!-- Define your test -->
+    <test name="TestName">
+        <classes>
+            <!-- Define the test classes to be run -->
+            <class name="com.testCases.TestCreateWorkingClassHero" />
+            <class name="com.testCases.TestGenerateTaxRelief" />
+        </classes>
+    </test>
+
+</suite>

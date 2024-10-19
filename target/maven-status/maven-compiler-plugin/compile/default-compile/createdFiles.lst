@@ -1,0 +1,6 @@
+com\base\BaseTest.class
+com\pages\LoginPage.class
+com\pages\ClerkDashboardPage.class
+com\testUtilities\TestUtilities.class
+com\pages\UploadCSVPage.class
+com\testUtilities\RestAssuredRequestWrapper.class

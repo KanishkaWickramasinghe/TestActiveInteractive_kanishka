@@ -1,4 +1,4 @@
-package com.base;
+package com.pages;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -14,11 +14,11 @@ import com.testUtilities.TestUtilities;
 
 
 
-public class BaseTest {
+public class BasePage {
 	public static Properties prop;
 	public static WebDriver driver;
 	
-	public BaseTest() {
+	public BasePage() {
 		{
 			try {
 				prop=new Properties();
@@ -48,10 +48,7 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(TestUtilities.IMPLICIT_WAIT,TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("url"));
-
-}
-	
-
+	}
 }
 
 	

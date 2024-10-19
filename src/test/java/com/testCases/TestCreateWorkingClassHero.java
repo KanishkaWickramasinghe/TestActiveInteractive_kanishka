@@ -8,25 +8,23 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.base.BaseTest;
+import com.pages.BasePage;
 import com.pages.ClerkDashboardPage;
 import com.pages.LoginPage;
 import com.pages.UploadCSVPage;
 import com.testUtilities.TestUtilities;
 
 import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 
-public class TestCreateWorkingClassHero extends BaseTest{
-
+public class TestCreateWorkingClassHero extends BasePage{
+	
 	TestUtilities utl= new TestUtilities();
 	String id1;
 	LoginPage login;
@@ -147,13 +145,11 @@ public class TestCreateWorkingClassHero extends BaseTest{
         .then()
             .statusCode(200)
             .header("Content-Type", equalTo("application/json")); // Assert status code is 200 (Created)
-
     }
 		
 	@Test
 	public void verifyHerosOwningMoney() throws FileNotFoundException {
 		RestAssured.baseURI=url;
-		
 		
 		File file=new File(".\\resources\\idFile.json");
 		FileReader fR=new FileReader(file);
@@ -161,7 +157,6 @@ public class TestCreateWorkingClassHero extends BaseTest{
 		JSONObject input_id=new JSONObject(jT);
 		System.out.println(input_id);
 		
-
 		String id_1=input_id.getString("id");
 		  Assert.assertEquals(utl.isValidId(id_1), true,"ID should be a numeric valie"); 
 		
@@ -199,9 +194,8 @@ public class TestCreateWorkingClassHero extends BaseTest{
 	
 	@Test
 	public void byPersonAndType() {
-		
+			
 		RestAssured.baseURI=url;
-		
 		given()
 		.when()
 			.get("/api/v1/voucher/by-person-and-type")			

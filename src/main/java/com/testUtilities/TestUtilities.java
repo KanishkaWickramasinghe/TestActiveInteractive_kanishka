@@ -13,13 +13,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.pages.BasePage;
 
 import static org.hamcrest.Matchers.*;
 import org.json.JSONObject;
-import com.base.BaseTest;
-//import com.github.dockerjava.transport.DockerHttpClient.Response;
 
-public class TestUtilities extends BaseTest{
+public class TestUtilities extends BasePage{
 	
 	public static long PAGE_LOAD_TIMEOUT=20;
 	public static long	IMPLICIT_WAIT=20;	
