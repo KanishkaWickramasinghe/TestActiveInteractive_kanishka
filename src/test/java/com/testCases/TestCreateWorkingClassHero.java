@@ -13,6 +13,7 @@ import org.json.JSONTokener;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.pages.BasePage;
@@ -87,8 +88,8 @@ public class TestCreateWorkingClassHero extends BasePage{
 	}
 	
 	@Test
-	void uploadCSVAsBookkeeper() throws InterruptedException {
-		initialization();
+	void UploadCSVAsClark() throws InterruptedException {
+		//initialization();
 		login=new LoginPage();
 		Assert.assertEquals(login.verifyLoginPageBannerText(), "Working Class Hero System");
 		
@@ -153,12 +154,21 @@ public class TestCreateWorkingClassHero extends BasePage{
 	@AfterMethod
     public void afterMethod(ITestResult result) {
         // Check the name of the test method that just ran
-        if (result.getMethod().getMethodName().equals("uploadCSVAsBookkeeper")) {
+        if (result.getMethod().getMethodName().equals("UploadCSVAsClark")) {
             System.out.println("Running @AfterMethod for '----UploadCSVAsClark----' ");
             // Your @AfterMethod logic here
             driver.quit();
         }
     }
+	
+	@BeforeMethod
+	public void setup(ITestResult results) {
+		if(results.getMethod().getMethodName().equals("UploadCSVAsClark")) {
+			System.out.println("Running @BeforeMethod for '----UploadCSVAsClark----' ");
+            // Your @AfterMethod logic here
+            initialization();
+		}
+	}
 	
 	
 		
