@@ -89,7 +89,6 @@ public class TestCreateWorkingClassHero extends BasePage{
 	
 	@Test
 	void UploadCSVAsClark() throws InterruptedException {
-		//initialization();
 		login=new LoginPage();
 		Assert.assertEquals(login.verifyLoginPageBannerText(), "Working Class Hero System");
 		
@@ -101,7 +100,6 @@ public class TestCreateWorkingClassHero extends BasePage{
 		upload.createCSVUpload();
 		Assert.assertEquals(upload.verifyBannerDisplay(), true,"File not uploaded!");
 		upload.verifyDisplayedBannerText();
-		
 	}
 	
 	@Test

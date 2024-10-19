@@ -2,31 +2,31 @@
 <testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-19T21:27:54 SGT" name="Default suite" finished-at="2024-10-19T21:27:56 SGT" duration-ms="1673">
+  <suite started-at="2024-10-20T00:03:20 SGT" name="Default suite" finished-at="2024-10-20T00:03:22 SGT" duration-ms="2303">
     <groups>
     </groups>
-    <test started-at="2024-10-19T21:27:54 SGT" name="Default test" finished-at="2024-10-19T21:27:56 SGT" duration-ms="1673">
+    <test started-at="2024-10-20T00:03:20 SGT" name="Default test" finished-at="2024-10-20T00:03:22 SGT" duration-ms="2303">
       <class name="com.testCases.TestCreateWorkingClassHero">
-        <test-method is-config="true" signature="setup(org.testng.ITestResult)[pri:0, instance:com.testCases.TestCreateWorkingClassHero@22ff4249]" started-at="2024-10-19T21:27:54 SGT" name="setup" finished-at="2024-10-19T21:27:54 SGT" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="setup(org.testng.ITestResult)[pri:0, instance:com.testCases.TestCreateWorkingClassHero@1165b38]" started-at="2024-10-20T00:03:20 SGT" name="setup" finished-at="2024-10-20T00:03:22 SGT" duration-ms="1406" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=TestCreateWorkingClassHero.verifyHerosOwningMoney()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@22ff4249] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=TestCreateWorkingClassHero.UploadCSVAsClark()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@1165b38] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyHerosOwningMoney()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@22ff4249]" started-at="2024-10-19T21:27:54 SGT" name="verifyHerosOwningMoney" finished-at="2024-10-19T21:27:56 SGT" duration-ms="1629" status="PASS">
+        <test-method signature="UploadCSVAsClark()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@1165b38]" started-at="2024-10-20T00:03:22 SGT" name="UploadCSVAsClark" finished-at="2024-10-20T00:03:22 SGT" duration-ms="705" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHerosOwningMoney -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testCases.TestCreateWorkingClassHero@22ff4249]" started-at="2024-10-19T21:27:56 SGT" name="afterMethod" finished-at="2024-10-19T21:27:56 SGT" duration-ms="1" status="PASS">
+        </test-method> <!-- UploadCSVAsClark -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testCases.TestCreateWorkingClassHero@1165b38]" started-at="2024-10-20T00:03:22 SGT" name="afterMethod" finished-at="2024-10-20T00:03:22 SGT" duration-ms="153" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyHerosOwningMoney status=SUCCESS method=TestCreateWorkingClassHero.verifyHerosOwningMoney()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@22ff4249] output={null}]]]>
+                <![CDATA[[TestResult name=UploadCSVAsClark status=SUCCESS method=TestCreateWorkingClassHero.UploadCSVAsClark()[pri:0, instance:com.testCases.TestCreateWorkingClassHero@1165b38] output={null}]]]>
               </value>
             </param>
           </params>

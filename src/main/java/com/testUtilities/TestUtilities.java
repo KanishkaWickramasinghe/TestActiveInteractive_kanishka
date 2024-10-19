@@ -5,12 +5,19 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.pages.BasePage;
@@ -23,22 +30,27 @@ public class TestUtilities extends BasePage{
 	public static long PAGE_LOAD_TIMEOUT=20;
 	public static long	IMPLICIT_WAIT=20;	
 
-
 	public static void waitForDisplayOfElement(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.visibilityOf(element));
+		Wait<WebDriver> fluentWait = new FluentWait<>(driver)
+	            .withTimeout(Duration.ofSeconds(30))         // Wait for a max of 30 seconds
+	            .pollingEvery(Duration.ofSeconds(3))         // Poll every 3 seconds
+	            .ignoring(NoSuchElementException.class)      // Ignore NoSuchElementException
+
+	            // Additional ignored exceptions (optional)
+	            .ignoring(StaleElementReferenceException.class);
 		
+		fluentWait.until(new Function<WebDriver, WebElement>() {
+            public WebElement apply(WebDriver driver) {
+                return element;
+            }
+        });
 	}
 	
 	public static void scrollToSpecificElement(WebElement element) {
-		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 
-	
-	
-	
 	public boolean  validateNatid(String input) {
 
 		String regex_natid = "^natid-([0-9]|[1-9][0-9]{0,6})$";
@@ -47,9 +59,7 @@ public class TestUtilities extends BasePage{
 		Matcher matcher = pattern.matcher(input);
 		return matcher.matches();
 	}
-	
-	
-	
+		
 	public static boolean isValidId(String id) {
         // Check if id is null or empty
         if (id == null || id.trim().isEmpty()) {
@@ -61,7 +71,6 @@ public class TestUtilities extends BasePage{
         return id.matches("\\d+"); // Matches one or more digits
     }
 	
-	
 	public boolean validateName(String name) {
 		String regex_name = "^[a-zA-Z ]{1,100}$";
 
@@ -69,7 +78,6 @@ public class TestUtilities extends BasePage{
 		
 		Matcher matcher = pattern.matcher(name);
 		return matcher.matches();
-
 	}
 	
 	public boolean getGenderDetails(String gender) {
@@ -79,12 +87,7 @@ public class TestUtilities extends BasePage{
 		else {
 			return false;
 		}
-		
-
 	}
-
-	
-
 
 	public boolean  validateDate(String input) {
 
@@ -111,10 +114,7 @@ public class TestUtilities extends BasePage{
             	System.out.println("Date field is empty.");
                 return false;
             }
-        
-		
 	}
-	
 	
 	public boolean  validateSalary(double input) {
 		
@@ -133,7 +133,6 @@ public class TestUtilities extends BasePage{
 			return false;
 	}
 	
-	
 	public boolean  validateTaxPaid(double input) {
 		
 		String regex_sal = "^-?\\d+(\\.\\d+)?$"; // Allow optional negative sign and decimal part
@@ -151,7 +150,6 @@ public class TestUtilities extends BasePage{
 			return false;
 		}
 	}
-	
 	
 	public boolean  validateBrowniePoints(Integer input) {
 

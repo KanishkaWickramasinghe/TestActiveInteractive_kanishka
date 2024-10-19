@@ -45,7 +45,6 @@ public class UploadCSVPage extends BasePage{
 		driver.manage().timeouts().implicitlyWait(TestUtilities.IMPLICIT_WAIT,TimeUnit.SECONDS);
 		TestUtilities.waitForDisplayOfElement(btn_create);
 		btn_create.click();
-		Thread.sleep(3000);
 		TestUtilities.waitForDisplayOfElement(statusBanner);
 		
 	}
